@@ -37,7 +37,7 @@ type CnameCheckCacheValue = {
  * 授权
  */
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class CnameRecordService extends BaseService<CnameRecordEntity> {
   @InjectEntityModel(CnameRecordEntity)
   repository: Repository<CnameRecordEntity>;

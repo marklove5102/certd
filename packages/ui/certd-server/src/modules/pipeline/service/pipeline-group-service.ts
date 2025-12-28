@@ -6,7 +6,7 @@ import { PipelineGroupEntity } from '../entity/pipeline-group.js';
 import { merge } from 'lodash-es';
 
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class PipelineGroupService extends BaseService<PipelineGroupEntity> {
   @InjectEntityModel(PipelineGroupEntity)
   repository: Repository<PipelineGroupEntity>;

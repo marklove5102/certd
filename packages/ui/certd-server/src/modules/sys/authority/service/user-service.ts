@@ -23,7 +23,7 @@ export const AdminRoleId = 1
  * 系统用户
  */
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class UserService extends BaseService<UserEntity> {
 
   @InjectEntityModel(UserEntity)

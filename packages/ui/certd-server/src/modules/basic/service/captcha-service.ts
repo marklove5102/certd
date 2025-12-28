@@ -5,7 +5,7 @@ import { ICaptchaAddon } from "../../../plugins/plugin-captcha/api.js";
 import { AddonGetterService } from "../../pipeline/service/addon-getter-service.js";
 
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class CaptchaService {
   @Inject()
   sysSettingsService: SysSettingsService;

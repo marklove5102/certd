@@ -5,7 +5,7 @@ import { SqlAdapter } from './d.js';
 import { MysqlAdapter } from './mysql.js';
 
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class DbAdapter implements SqlAdapter {
   adapter: SqlAdapter;
   @Config('typeorm.dataSource.default.type')

@@ -3,7 +3,7 @@ import { logger } from "@certd/basic";
 import { PluginService } from "../plugin/service/plugin-service.js";
 
 @Autoload()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class AutoBLoadPlugins {
   @Inject()
   pluginService: PluginService;

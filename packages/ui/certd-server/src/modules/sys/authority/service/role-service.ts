@@ -13,7 +13,7 @@ import { LRUCache } from 'lru-cache';
  * 角色
  */
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class RoleService extends BaseService<RoleEntity> {
   @InjectEntityModel(RoleEntity)
   repository: Repository<RoleEntity>;

@@ -5,7 +5,7 @@ import { IOcrService } from "@certd/plugin-lib";
 /**
  */
 @Provide("ocrService")
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class OcrService implements IOcrService {
   @Inject()
   plusService: PlusService;

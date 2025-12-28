@@ -15,7 +15,7 @@ import { CnameRecordEntity } from "../../cname/entity/cname-record.js";
  *
  */
 @Provide()
-@Scope(ScopeEnum.Request, {allowDowngrade: true})
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class DomainService extends BaseService<DomainEntity> {
   @InjectEntityModel(DomainEntity)
   repository: Repository<DomainEntity>;

@@ -18,7 +18,7 @@ import { dnsContainer } from "./dns-custom.js";
 const dns =  dnsSdk.promises;
 
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class SiteIpService extends BaseService<SiteIpEntity> {
   @InjectEntityModel(SiteIpEntity)
   repository: Repository<SiteIpEntity>;

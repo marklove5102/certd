@@ -9,7 +9,7 @@ import {PipelineEntity} from "../entity/pipeline.js";
 import {Pipeline} from "@certd/pipeline";
 
 @Provide()
-@Scope(ScopeEnum.Request, {allowDowngrade: true})
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class TemplateService extends BaseService<TemplateEntity> {
   @InjectEntityModel(TemplateEntity)
   repository: Repository<TemplateEntity>;

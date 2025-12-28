@@ -6,7 +6,7 @@ import {SubDomainEntity} from '../entity/sub-domain.js';
 import {EmailService} from '../../basic/service/email-service.js';
 
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class SubDomainService extends BaseService<SubDomainEntity> {
   @InjectEntityModel(SubDomainEntity)
   repository: Repository<SubDomainEntity>;

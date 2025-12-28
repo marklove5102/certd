@@ -7,7 +7,7 @@ import { UserService } from "../../sys/authority/service/user-service.js";
  * 授权
  */
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class TwoFactorService {
   @Inject()
   userSettingsService: UserSettingsService;

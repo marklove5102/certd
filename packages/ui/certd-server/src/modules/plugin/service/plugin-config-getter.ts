@@ -3,7 +3,7 @@ import { IPluginConfigService, PluginConfig } from '@certd/pipeline';
 import { PluginConfigService } from './plugin-config-service.js';
 
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class PluginConfigGetter implements IPluginConfigService {
   @Inject()
   pluginConfigService: PluginConfigService;

@@ -22,7 +22,7 @@ import { OauthBoundService } from "./oauth-bound-service.js";
 /**
  */
 @Provide()
-@Scope(ScopeEnum.Request, {allowDowngrade: true})
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class LoginService {
   @Inject()
   userService: UserService;

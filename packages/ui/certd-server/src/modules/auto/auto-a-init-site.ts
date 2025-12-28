@@ -7,7 +7,7 @@ import crypto from 'crypto';
 import {SafeService} from "../sys/settings/safe-service.js";
 
 @Autoload()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class AutoAInitSite {
   @Inject()
   userService: UserService;

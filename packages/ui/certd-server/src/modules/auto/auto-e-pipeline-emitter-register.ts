@@ -5,7 +5,7 @@ import { CertInfo, EVENT_CERT_APPLY_SUCCESS } from "@certd/plugin-cert";
 import { PipelineEvent } from "@certd/pipeline";
 
 @Autoload()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class AutoEPipelineEmitterRegister {
   @Inject()
   certInfoService: CertInfoService;

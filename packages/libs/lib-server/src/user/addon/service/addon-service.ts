@@ -9,7 +9,7 @@ import { AddonEntity } from "../entity/addon.js";
  * Addon
  */
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class AddonService extends BaseService<AddonEntity> {
   @InjectEntityModel(AddonEntity)
   repository: Repository<AddonEntity>;

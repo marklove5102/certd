@@ -12,7 +12,7 @@ import { DomainVerifierGetter } from "../../pipeline/service/getter/domain-verif
 
 
 @Provide("CertInfoFacade")
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class CertInfoFacade  {
 
   @Inject()

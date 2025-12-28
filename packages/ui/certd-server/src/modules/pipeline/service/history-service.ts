@@ -16,7 +16,7 @@ import { logger } from '@certd/basic';
  * 证书申请
  */
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class HistoryService extends BaseService<HistoryEntity> {
   @InjectEntityModel(HistoryEntity)
   repository: Repository<HistoryEntity>;

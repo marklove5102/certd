@@ -8,7 +8,7 @@ import { UserRoleEntity } from '../entity/user-role.js';
  * 用户->角色
  */
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class UserRoleService extends BaseService<UserRoleEntity> {
   @InjectEntityModel(UserRoleEntity)
   repository: Repository<UserRoleEntity>;

@@ -18,7 +18,7 @@ import {Cron} from "../../cron/cron.js";
 import { dnsContainer } from "./dns-custom.js";
 
 @Provide()
-@Scope(ScopeEnum.Request, {allowDowngrade: true})
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class SiteInfoService extends BaseService<SiteInfoEntity> {
   @InjectEntityModel(SiteInfoEntity)
   repository: Repository<SiteInfoEntity>;

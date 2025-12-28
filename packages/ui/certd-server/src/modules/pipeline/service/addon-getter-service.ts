@@ -7,7 +7,7 @@ import { AddonService, newAddon, PermissionException, ValidateException } from "
  * Addon
  */
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class AddonGetterService  {
 
   @Inject()

@@ -6,7 +6,7 @@ import { merge } from 'lodash-es';
 import { GroupEntity } from '../entity/group.js';
 
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class GroupService extends BaseService<GroupEntity> {
   @InjectEntityModel(GroupEntity)
   repository: Repository<GroupEntity>;

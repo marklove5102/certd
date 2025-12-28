@@ -3,7 +3,7 @@ import { Inject, Provide, Scope, ScopeEnum } from "@midwayjs/core";
 import { SiteInfo ,ISiteInfoGetter} from "@certd/plugin-lib";
 
 @Provide("siteInfoGetter")
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class SiteInfoGetter implements ISiteInfoGetter{
     @Inject()
     sysSettingsService: SysSettingsService;

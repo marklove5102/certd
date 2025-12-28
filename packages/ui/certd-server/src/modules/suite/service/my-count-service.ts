@@ -5,7 +5,7 @@ import { IUsedCountService } from '@certd/commercial-core';
 import { SiteInfoService } from '../../monitor/service/site-info-service.js';
 
 @Provide('myCountService')
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class MyCountService implements IUsedCountService {
   @Inject()
   pipelineService: PipelineService;

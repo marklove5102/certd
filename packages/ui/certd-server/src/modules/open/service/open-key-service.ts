@@ -15,7 +15,7 @@ export type OpenKey = {
   scope: string;
 };
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class OpenKeyService extends BaseService<OpenKeyEntity> {
   @InjectEntityModel(OpenKeyEntity)
   repository: Repository<OpenKeyEntity>;

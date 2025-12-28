@@ -12,7 +12,7 @@ export type NetTestResult = {
 }
 
 @Provide('nettestService')
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class NetTestService {
   /**
    * 执行Telnet测试

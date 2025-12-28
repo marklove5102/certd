@@ -56,7 +56,7 @@ const runningTasks: Map<string | number, Executor> = new Map();
  * 证书申请
  */
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class PipelineService extends BaseService<PipelineEntity> {
   @InjectEntityModel(PipelineEntity)
   repository: Repository<PipelineEntity>;

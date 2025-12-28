@@ -14,7 +14,7 @@ const UserSettingCache = new LocalCache({
  * 授权
  */
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class UserSettingsService extends BaseService<UserSettingsEntity> {
   @InjectEntityModel(UserSettingsEntity)
   repository: Repository<UserSettingsEntity>;

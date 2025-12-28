@@ -8,7 +8,7 @@ import { RolePermissionEntity } from '../entity/role-permission.js';
  * 角色->权限
  */
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class RolePermissionService extends BaseService<RolePermissionEntity> {
   @InjectEntityModel(RolePermissionEntity)
   repository: Repository<RolePermissionEntity>;

@@ -47,7 +47,7 @@ export const hiddenStatus = new HiddenStatus();
 
 
 @Provide('safeService')
-@Scope(ScopeEnum.Request, {allowDowngrade: true})
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class SafeService {
 
   @Inject()

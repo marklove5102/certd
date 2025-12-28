@@ -16,7 +16,7 @@ import { EmailService } from '../../basic/service/email-service.js';
 import { isComm, isPlus } from '@certd/plus-core';
 
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class NotificationService extends BaseService<NotificationEntity> {
   @InjectEntityModel(NotificationEntity)
   repository: Repository<NotificationEntity>;

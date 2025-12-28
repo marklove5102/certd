@@ -9,7 +9,7 @@ import { CommonProviders } from './common-provider.js';
  * 授权
  */
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class CnameProviderService extends BaseService<CnameProviderEntity> {
   @InjectEntityModel(CnameProviderEntity)
   repository: Repository<CnameProviderEntity>;

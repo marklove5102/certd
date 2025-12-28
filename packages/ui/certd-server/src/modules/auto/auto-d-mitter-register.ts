@@ -3,7 +3,7 @@ import { UserSuiteService } from '@certd/commercial-core';
 import { Autoload, Init, Inject, Scope, ScopeEnum } from '@midwayjs/core';
 
 @Autoload()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class AutoDMitterRegister {
   @Inject()
   userSuiteService: UserSuiteService;

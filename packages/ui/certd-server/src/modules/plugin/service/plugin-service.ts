@@ -20,7 +20,7 @@ export type PluginImportReq = {
 };
 
 @Provide()
-@Scope(ScopeEnum.Request, {allowDowngrade: true})
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class PluginService extends BaseService<PluginEntity> {
   @InjectEntityModel(PluginEntity)
   repository: Repository<PluginEntity>;

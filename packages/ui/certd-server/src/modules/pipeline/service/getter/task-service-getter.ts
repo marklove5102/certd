@@ -70,7 +70,7 @@ export class TaskServiceGetter implements IServiceGetter{
   }
 }
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class TaskServiceBuilder  {
   @ApplicationContext()
   appCtx: IMidwayContainer;

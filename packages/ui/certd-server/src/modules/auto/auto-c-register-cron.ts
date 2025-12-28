@@ -13,7 +13,7 @@ import {UserService} from "../sys/authority/service/user-service.js";
 import {Between} from "typeorm";
 
 @Autoload()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class AutoCRegisterCron {
   @Inject()
   pipelineService: PipelineService;

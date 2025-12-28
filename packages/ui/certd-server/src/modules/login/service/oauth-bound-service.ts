@@ -6,7 +6,7 @@ import { OauthBoundEntity } from "../entity/oauth-bound.js";
 
 
 @Provide()
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class OauthBoundService extends BaseService<OauthBoundEntity> {
  
   @InjectEntityModel(OauthBoundEntity)

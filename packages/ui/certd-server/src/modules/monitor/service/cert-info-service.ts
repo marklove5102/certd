@@ -16,7 +16,7 @@ export type UploadCertReq = {
 
 
 @Provide("CertInfoService")
-@Scope(ScopeEnum.Request, { allowDowngrade: true })
+@Scope(ScopeEnum.Singleton, { allowDowngrade: true })
 export class CertInfoService extends BaseService<CertInfoEntity> {
   @InjectEntityModel(CertInfoEntity)
   repository: Repository<CertInfoEntity>;
